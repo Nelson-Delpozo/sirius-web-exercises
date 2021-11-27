@@ -428,6 +428,45 @@ console.log(rollDice(125));
 
 //////////////////////////////////////
 
+function returnTwo(){
+    return 2;
+}
+
+console.log(returnTwo());
+
+/////////////////////////////
+
+function howdy(){
+    console.log("Howdy!");
+}
+
+howdy();
+
+///////////////////////////////
+
+function returnName(){
+    return "Nelson";
+}
+
+console.log(returnName());
+
+//////////////////////////////////
+
+function addThree(num){
+    return num + 3;
+}
+
+console.log(addThree(5));
+
+////////////////////////////////
+
+function sayString(input){
+    return input
+}
+
+console.log(sayString("Codeup"));
+
+////////////////////////////////
 
 
 
