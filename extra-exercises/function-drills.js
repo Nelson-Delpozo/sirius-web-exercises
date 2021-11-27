@@ -307,6 +307,127 @@ console.log(cubeRoot(27));
 
 //////////////////////////////////
 
+function invertSign(num){
+    if(!isNaN(num)){
+    return parseInt(num) * -1;
+        }else return false
+}
+
+
+console.log(invertSign(5));
+console.log(invertSign(-10));
+console.log(invertSign("Joe"));
+
+/////////////////////////
+
+function degreesToRadians(num){
+    return num * (Math.PI / 180);
+}
+
+console.log(degreesToRadians(50));
+
+/////////////////////////////////
+
+function radiansToDegrees(num){
+    return num * (180 / Math.PI);
+}
+
+console.log(radiansToDegrees(.87));
+
+///////////////////////////////////
+
+function isBlank(input){
+    return input[0] === " ";
+}
+
+console.log(isBlank(" Hello"));
+console.log(isBlank("There"));
+
+////////////////////////////////////
+
+function trim(str){
+    return str.trim();
+}
+
+console.log(trim("   Hello there buddy    "));
+
+/////////////////////////////////////
+
+function areEqual(a, b){
+    return a == b;
+}
+
+console.log(areEqual(5, 6));
+console.log(areEqual(7, 7));
+
+/////////////////////////////////////
+
+function areIdentical(a, b){
+    return a === b;
+}
+
+console.log(areIdentical(5, "5"));
+console.log(areIdentical("7", "7"));
+
+/////////////////////////////////////
+
+function not(input){
+    return !input;
+}
+
+console.log(not(5));
+console.log(not("Joe"));
+console.log(not(0));
+
+/////////////////////////////////////
+
+function notNot(input){
+    return !!input;
+}
+
+/////////////////////////////////
+
+function and(a, b){
+    return a && b;
+}
+
+console.log(and(5, true));
+console.log(and(-1, false));
+
+////////////////////////////////
+
+function or(a, b){
+    return a || b;
+}
+///////////////////////////////
+
+function reverseString(str){
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString("Hello there 007"));
+
+/////////////////////////////////
+
+function absoluteValue(num){
+    let abs = Math.abs(num);
+    return abs;
+}
+
+console.log(absoluteValue(-25));
+
+////////////////////////////////
+
+function rollDice(sides){
+    return Math.floor(Math.random() * sides);
+}
+
+console.log(rollDice(12));
+console.log(rollDice(4));
+console.log(rollDice(125));
+
+//////////////////////////////////////
+
 
 
 
