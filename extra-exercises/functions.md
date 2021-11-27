@@ -184,6 +184,3 @@ Functions using conditionals but not loops or arrays:
    they do not have to be a certain age but the password must still not match
    the username.
 
-git remote add origin git@github.com:Nelson-Delpozo/sirius-web-exercises.git
-git branch -M main
-git push -u origin main
