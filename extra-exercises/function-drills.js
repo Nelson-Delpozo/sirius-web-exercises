@@ -468,6 +468,33 @@ console.log(sayString("Codeup"));
 
 ////////////////////////////////
 
+function getRandomNumber(min, max){
+    return Math.random() * (max - min) + min;
+}
+
+console.log(getRandomNumber(5,10));
+
+///////////////////////////////////
+
+function first(str){
+    return str.charAt(0);
+}
+
+console.log(first("Hello"));
+
+///////////////////////////////////
+
+function last(str){
+    return str.charAt(str.length - 1);
+}
+
+console.log(last("Hello again!"));
+
+///////////////////////////////////
+
+
+
+
 
 
 
