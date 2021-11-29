@@ -1,3 +1,6 @@
+"use strict";
+
+
 function isOdd(num){
     return num % 2 === 0;
 }
@@ -415,8 +418,7 @@ console.log(reverseString("Hello there 007"));
 /////////////////////////////////
 
 function absoluteValue(num){
-    let abs = Math.abs(num);
-    return abs;
+    return Math.abs(num);
 }
 
 console.log(absoluteValue(-25));
