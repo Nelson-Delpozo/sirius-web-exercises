@@ -492,6 +492,72 @@ console.log(last("Hello again!"));
 
 ///////////////////////////////////
 
+function rest(str){
+    return str.substring(1);
+}
+
+console.log(rest("Hello yet again"));
+
+////////////////////////////////////
+
+function reverse(input){
+    return input.split("").reverse().join("");
+}
+
+console.log(reverse("ti kcus nac namtaB"));
+
+/////////////////////////////////////
+
+function isNumeric(input){
+    return isNaN(input);
+}
+
+console.log(isNumeric('Hello'));
+console.log(isNumeric(5));
+
+////////////////////////////////////
+
+function count(input){
+    return input.length;
+}
+
+console.log(count("So we meet again"));
+
+////////////////////////////////////
+
+function sumOfSquares(a, b){
+    return Math.pow(a, 2) + Math.pow(b, 2);
+}
+
+console.log(sumOfSquares(2, 5));
+
+///////////////////////////////////////////
+
+function doMath(operator, a, b){
+    let operation = "";
+    switch(operator){
+        case "+":
+            operation =  (a + b);
+            break;
+        case "-":
+            operation = (a - b);
+            break;
+        case "*":
+            operation = (a * b);
+            break;
+        case "/":
+            operation = (a / b);
+    } return operation;
+}
+
+console.log(doMath("+", 5, 5));
+
+/////////////////////////////////
+
+
+
+
+
 
 
 
