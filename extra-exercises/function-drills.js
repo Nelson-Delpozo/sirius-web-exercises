@@ -554,6 +554,43 @@ console.log(doMath("+", 5, 5));
 
 /////////////////////////////////
 
+function countWhiteSpaces(input){
+    return input.match(/([\s]+)/g).length;
+}
+
+console.log(countWhiteSpaces(" Hello there "));
+
+////////////////////////////////////
+
+function countWhiteSpacesAtBeginningAndEnd(input){
+    return (input.length) - input.trim().length;
+}
+
+console.log(countWhiteSpacesAtBeginningAndEnd("  There are two at the start, and three   "));
+
+//////////////////////////////////////
+
+function isLastLetterA(str){
+    return str.charAt(str.length - 1) === ("a" || "A");
+}
+
+console.log(isLastLetterA("It's not"));
+console.log(isLastLetterA("It is-a"));
+
+///////////////////////////////////////////////
+
+function whiteSpacesAtLeft(str){
+    return (str.length) - (str.trimLeft().length);
+}
+
+console.log(whiteSpacesAtLeft("   Three "));
+console.log(whiteSpacesAtLeft(" One "));
+
+///////////////////////////////////////////////
+
+
+
+
 
 
 
