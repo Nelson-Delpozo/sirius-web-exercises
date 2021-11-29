@@ -385,6 +385,8 @@ function notNot(input){
     return !!input;
 }
 
+console.log(notNot(true));
+
 /////////////////////////////////
 
 function and(a, b){
@@ -397,8 +399,11 @@ console.log(and(-1, false));
 ////////////////////////////////
 
 function or(a, b){
-    return a || b;
+    return (a || b);
 }
+
+console.log(or(true, false));
+
 ///////////////////////////////
 
 function reverseString(str){
