@@ -37,3 +37,12 @@ div{
     top: 2px;
 }
 
+/*SECOND DIV*/
+
+#second-div{
+    background-color: lightblue;
+}
+
+#second-div:active{
+    background-color: lightpink;
+}
