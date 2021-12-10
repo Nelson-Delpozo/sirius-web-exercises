@@ -20,6 +20,8 @@ div{
     text-decoration: none;
     /*//very important for centering vertically*/
     display: inline-block;
+    /*use relative position so they move when you click them (see a:active)*/
+    position: relative;
 }
 /*basic inline navbar with flex*/
 #first-div{
@@ -30,5 +32,8 @@ div{
     align-content: center;
 }
 
-
+#navbar ul a:active{
+    /*makes them move when clicked along with position: relative*/
+    top: 2px;
+}
 
