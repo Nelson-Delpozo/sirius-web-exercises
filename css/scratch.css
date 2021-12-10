@@ -41,8 +41,27 @@ div{
 
 #second-div{
     background-color: lightblue;
+    width: 50%;
+    /*display: inline-block;*/
+    /*text-align: center;*/
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+
+
 }
 
 #second-div:active{
     background-color: lightpink;
+}
+
+
+/*THIRD DIV*/
+
+#third-div{
+    width: 15%;
+    display: inline-block;
 }
