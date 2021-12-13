@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .container{
     height: 400px;
     width: 400px;
@@ -12,4 +16,8 @@
     margin: 10px;
     border: 1px solid green;
     background-color: yellow;
+}
+
+body{
+    background-color: burlywood;
 }
