@@ -3,21 +3,71 @@
 }
 
 .container{
-    height: 400px;
+    height: 250px;
     width: 400px;
     margin: 10px;
     border: 1px solid blueviolet;
     background-color: lightpink;
 }
 
-.inner{
-    height: 100px;
-    width: 100px;
-    margin: 10px;
-    border: 1px solid green;
-    background-color: yellow;
-}
+/*.inner{*/
+/*    height: 100px;*/
+/*    width: 100px;*/
+/*    margin: 10px;*/
+/*    border: 1px solid green;*/
+/*    background-color: yellow;*/
+/*    padding: 5px;*/
+/*    text-align: center;*/
+/*}*/
 
 body{
     background-color: burlywood;
+}
+
+.bottom{
+    width: 50%;
+    margin: 20px;
+}
+
+.bottom-box{
+    height: 200px;
+    width: 200px;
+    background-color: yellow;
+    border: 1px solid blue;
+    margin: 5px;
+}
+
+#top-box{
+    float: left;
+}
+
+p{
+    padding: 10px;
+}
+
+#second-box{
+    float: right;
+    border-radius: 50%;
+}
+
+#two{
+    text-align: right;
+}
+
+#third-box{
+    float: left;
+}
+
+#last-box{
+    float: right;
+    border-radius: 50%;
+
+}
+
+#four{
+    text-align: right;
+}
+
+.bottom{
+    padding: 20px;
 }
