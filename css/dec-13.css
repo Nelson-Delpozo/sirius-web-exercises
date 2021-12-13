@@ -61,7 +61,6 @@ p{
 #last-box{
     float: right;
     border-radius: 50%;
-
 }
 
 #four{
@@ -70,4 +69,38 @@ p{
 
 .bottom{
     padding: 20px;
+}
+
+#relative-position{
+    height: 400px;
+    width: 400px;
+    background-color: #f79256;
+    border: 1px solid black;
+}
+
+.relative-box{
+    height: 50px;
+    width: 50px;
+    background-color: #53f4ff;
+    position: relative;
+    display: inline-block;
+}
+
+#box1{
+    top: 0;
+}
+
+#box2{
+    left: 294px;
+    top: 0;
+}
+
+#box3{
+    top: 348px;
+    right: 106px;
+}
+
+#box4{
+    left: 186px;
+    top: 348px;
 }
