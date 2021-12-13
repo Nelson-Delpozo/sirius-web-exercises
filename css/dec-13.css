@@ -1,0 +1,15 @@
+.container{
+    height: 400px;
+    width: 400px;
+    margin: 10px;
+    border: 1px solid blueviolet;
+    background-color: lightpink;
+}
+
+.inner{
+    height: 100px;
+    width: 100px;
+    margin: 10px;
+    border: 1px solid green;
+    background-color: yellow;
+}
