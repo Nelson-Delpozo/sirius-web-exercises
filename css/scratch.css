@@ -1,3 +1,5 @@
+/*DOCUMENT STYLING*/
+
 *{
     box-sizing: border-box;
     color: black;
@@ -11,6 +13,8 @@ html{
     background-color: #d5a18e;
 }
 
+/*NAVBAR STYLING*/
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -18,7 +22,6 @@ html{
     background-color: #b9314f;
     position: fixed;
     width: 100%;
-
 }
 
 .nav-content{
@@ -48,10 +51,11 @@ html{
     font-size: xx-large;
     color: blue;
     transition: 1s;
-    /*transform: rotate(45deg);*/
 }
 
 /*end of navbar css*/
+
+/*CARD CONTAINER CSS*/
 
 .card-container{
     display: flex;
@@ -59,6 +63,11 @@ html{
     border: 2px solid blue;
     padding: 15px;
 
+}
+/*CARDS AND CARD ITEMS STYLING*/
+hr{
+    border: 1px solid #3a4f41;
+    width: 50%;
 }
 
 .card{
@@ -71,15 +80,10 @@ html{
     border-radius: 5px;
 }
 
-/*.card:hover{*/
-/*    transform: rotate(90deg);*/
-/*}*/
-
 .card img{
     height: 200px;
     margin-top: 1em;
     border-radius: 5px;
-
 }
 
 h1{
@@ -104,20 +108,18 @@ h1{
     color: #b9314f;
 }
 
-/*.icons a:hover{*/
-/*    background-color: #b9314f;*/
-/*}*/
-
 .card a{
     text-decoration: none;
 }
+
+/*FOOTER STYLING*/
 
 .footer{
     text-align: center;
     font-family: "Apple Chancery", sans-serif;
     font-size: 5em;
     width: 75%;
-    margin: 0 auto;
+    margin: 1em auto;
     background-color: #dec3be;
 }
 
@@ -127,13 +129,41 @@ h1{
 
 .footer p{
     font-size: large;
+    padding: 2em;
 }
 
-hr{
-    border: 1px solid #3a4f41;
-    width: 50%;
-}
+/*TAGLINE STYLING*/
 
 .tag-line{
     text-align: center;
+}
+
+/*LOADER*/
+
+.loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-bottom: 16px solid blue;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+
+.loader-holder{
+    padding: 1em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
