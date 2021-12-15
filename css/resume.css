@@ -1,8 +1,61 @@
+/*OVERALL DOCUMENT STYLING*/
+
 *{
     box-sizing: border-box;
     color: black;
 }
 
 body{
-    /*margin: 0;*/
+    margin: 2em 10em;
+    background-color: #fcfaee;
 }
+
+html{
+    background-color: #f5f0cc;
+}
+
+/*HEADER STYLING*/
+
+
+.header{
+    display: flex;
+    background-color: #b2d3a8;
+    flex-wrap: wrap;
+
+}
+
+.name-box{
+    width: 30%;
+    background-color: #e7f1e4;
+    align-items: flex-end;
+    display: flex;
+    padding: 1em;
+}
+
+.executive-summary{
+    width: 70%;
+    padding-left: 1em;
+}
+
+/*END OF HEADER STYLING*/
+
+.left-column{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 1em;
+    background-color: #b2d3a8;
+}
+
+.right-column{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    padding: 1em;
+    background-color: #e7f1e4;
+}
+
+.main-container{
+    display: flex;
+}
+
