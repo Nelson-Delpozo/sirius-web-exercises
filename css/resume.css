@@ -104,6 +104,26 @@ ul{
     width: 100%;
     text-align: center;
 }
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    flex-direction: column;
+    text-align: center;
+}
+
+.name-box, .executive-summary{
+    width: 100%;
+    justify-content: center;
+}
+
+.executive-summary{
+    padding-right: 1em;
+}
+
 }
 
 
