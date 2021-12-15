@@ -39,6 +39,14 @@ html{
 
 /*END OF HEADER STYLING*/
 
+/*MAIN CONTAINER STYLING*/
+
+.main-container{
+    display: flex;
+}
+
+/*LEFT COLUMN STYLING*/
+
 .left-column{
     display: flex;
     flex-direction: column;
@@ -46,6 +54,12 @@ html{
     padding: 1em;
     background-color: #b2d3a8;
 }
+
+.education-item h4{
+    margin-bottom: 0;
+}
+
+/*RIGHT COLUMN STYLING*/
 
 .right-column{
     display: flex;
@@ -55,7 +69,8 @@ html{
     background-color: #e7f1e4;
 }
 
-.main-container{
-    display: flex;
+hr{
+    border: 1px solid #558745;
+    width: 75%;
 }
 
