@@ -69,6 +69,13 @@ html{
     background-color: #e7f1e4;
 }
 
+.achievements h5{
+    margin: .5em auto;
+}
+.achievements p{
+    margin-top: .5em;
+}
+
 /*STYLING FOR HRs*/
 
 hr{
