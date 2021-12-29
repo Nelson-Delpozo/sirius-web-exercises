@@ -4,3 +4,15 @@
 body{
     margin: 0 auto;
 }
+.jumbotron {
+    text-align: left;
+    background-image: url("/img/bike.jpeg");
+    background-size: cover;
+    color: darkblue;
+    padding: 25px;
+}
+
+.jumbotron *{
+    margin-left: 100px;
+}
+
