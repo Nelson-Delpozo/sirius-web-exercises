@@ -1,13 +1,57 @@
-*{
+* {
     box-sizing: border-box;
     color: black;
 }
-p{
+
+p {
     font-family: 'Abel', sans-serif;
+
 }
-h1 h2 h3 h4 h5 h6{
+
+h1 h2 h3 h4 h5 h6 {
     font-family: 'Anton', sans-serif;
+
 }
-body{
+
+#codeup-design {
+    font-size: 40px;
+}
+
+body {
     background-color: #E6E6E6;
 }
+
+#stripe {
+    height: 80px;
+    background-color: white;
+    margin-top: 15px;
+
+}
+
+.container-fluid {
+    position: fixed;
+    z-index: 1000;
+    top: 3px;
+}
+
+#logo img {
+    height: 105px;
+}
+
+#logo-holder {
+    text-align: center;
+}
+
+
+@media only screen and (min-width: 586px) {
+
+    #codeup-design p {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    p {
+        padding-top: 40px;
+    }
+}
+
