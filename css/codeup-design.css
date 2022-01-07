@@ -1,38 +1,72 @@
-* {
-    box-sizing: border-box;
-    color: black;
-}
+/*SMALLEST SCREENS*/
 
+/*FONT FOR ALL P TAGS*/
 p {
     font-family: 'Abel', sans-serif;
-
 }
 
+/*FOR THE TWO HEADERS UNDER THE LINKS*/
 .second-section {
     font-family: 'Anton', sans-serif;
 }
 
+/*FOR THE HEADERS INSIDE THE CIRCLES*/
+.circle h5 {
+    font-family: 'Anton', sans-serif;
+}
+
+/*THE CIRCLES*/
+.circle {
+    border: 6px solid white;
+    height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cir-1 {
+    background-color: #EB9D3A;
+}
+
+.cir-2 {
+    background-color: #DEA03D;
+}
+
+.cir-3 {
+    background-color: #7CB06C;
+}
+
+.cir-4 {
+    background-color: #00ABA9;
+}
+
+/*CODEUP DESIGN TEXT*/
 #codeup-design {
     font-size: 40px;
 }
 
+/*PER WIREFRAME*/
 body {
     background-color: #E6E6E6;
 }
 
+/*THE WHITE STRIPE*/
 #stripe {
     height: 80px;
     background-color: white;
     margin-top: 15px;
-
 }
 
+/*THE MAIN CONTAINER...IT HAS A FIXED POSITION AND Z-INDEX SO IT FLOATS ON TOP OF THE STRIPE*/
 .container-fluid {
     position: fixed;
     z-index: 1000;
     top: 3px;
 }
 
+/*PER THE WIREFRAME*/
 #logo img {
     height: 105px;
 }
@@ -42,15 +76,26 @@ body {
 }
 
 
-@media only screen and (min-width: 586px) {
+/*SMALL SCREENS*/
+@media only screen and (min-width: 576px) {
 
-    #codeup-design p {
-        padding-top: 20px;
-        padding-bottom: 50px;
-    }
+    /*#codeup-design p {*/
+    /*    padding-top: 20px;*/
+    /*}*/
 
-    p {
+
+}
+
+/*MEDIUM SCREEN*/
+@media only screen and (min-width: 768px){
+  #codeup-design p {
+       padding-top: 20px;
+       padding-bottom: 50px;
+   }
+    p{
         padding-top: 40px;
     }
+
+
 }
 
