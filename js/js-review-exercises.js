@@ -4,7 +4,15 @@
 
 // Write a function that takes in a number and returns triple the value of the passed number. Assume only number inputs.
 
+
+function triple(num){
+    return num * 3
+}
 // Modify the above function to work with numeric strings as well.
+
+function triple(num) {
+    return parseInt(num) * 3
+}
 
 // Modify the above function to return a string output of 'not a number' if the input is not a number or numeric string.
 
