@@ -60,11 +60,11 @@ body {
 }
 
 /*THE MAIN CONTAINER...IT HAS A FIXED POSITION AND Z-INDEX SO IT FLOATS ON TOP OF THE STRIPE*/
-.container-fluid {
-    position: fixed;
-    z-index: 1000;
-    top: 3px;
-}
+/*.container-fluid {*/
+/*    position: fixed;*/
+/*    z-index: 1000;*/
+/*    top: 3px;*/
+/*}*/
 
 /*PER THE WIREFRAME*/
 #logo img {
