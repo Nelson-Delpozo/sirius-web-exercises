@@ -40,46 +40,101 @@
 <!--    </div>-->
 <!--</div>-->
 
-<div class="container bottom" id="top">
-    <div id="top-box" class="bottom-box">
-    </div>
-    <p id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque
-        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus
-        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi
-        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>
-</div>
-<div class="container bottom">
-    <div id="second-box" class="bottom-box">
-    </div>
-    <p id="two">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque
-        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus
-        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi
-        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>
+<!--<div class="container bottom" id="top">-->
+<!--    <div id="top-box" class="bottom-box">-->
+<!--    </div>-->
+<!--    <p id="one">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque-->
+<!--        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus-->
+<!--        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi-->
+<!--        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>-->
+<!--</div>-->
+<!--<div class="container bottom">-->
+<!--    <div id="second-box" class="bottom-box">-->
+<!--    </div>-->
+<!--    <p id="two">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque-->
+<!--        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus-->
+<!--        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi-->
+<!--        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>-->
 
-</div>
-<div class="container bottom">
-    <div id="third-box" class="bottom-box">
-    </div>
-    <p id="three">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque
-        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus
-        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi
-        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>
+<!--</div>-->
+<!--<div class="container bottom">-->
+<!--    <div id="third-box" class="bottom-box">-->
+<!--    </div>-->
+<!--    <p id="three">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque-->
+<!--        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus-->
+<!--        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi-->
+<!--        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>-->
 
-</div>
-<div class="container bottom">
-    <div id="last-box" class="bottom-box">
-    </div>
-    <p id="four">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque
-        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus
-        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi
-        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>
-</div>
-<div id="relative-position">
-    <div id="box1" class="relative-box"></div>
-    <div id="box2" class="relative-box"></div>
-    <div id="box3" class="relative-box"></div>
-    <div id="box4" class="relative-box"></div>
-</div>
+<!--</div>-->
+<!--<div class="container bottom">-->
+<!--    <div id="last-box" class="bottom-box">-->
+<!--    </div>-->
+<!--    <p id="four">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At culpa dignissimos distinctio doloremque-->
+<!--        magnam, magni qui sint voluptas. Alias aliquid et eum facere illo laborum obcaecati, optio pariatur possimus-->
+<!--        quaerat repudiandae sit? Accusantium beatae dicta eaque, et illum incidunt laboriosam magnam maxime, modi-->
+<!--        nesciunt nulla odio pariatur perspiciatis placeat porro?</p>-->
+<!--</div>-->
+<!--<div id="relative-position">-->
+<!--    <div id="box1" class="relative-box"></div>-->
+<!--    <div id="box2" class="relative-box"></div>-->
+<!--    <div id="box3" class="relative-box"></div>-->
+<!--    <div id="box4" class="relative-box"></div>-->
+<!--</div>-->
+
+<script>
+
+    const shoppingCart = {
+        tax: 0.08,
+        items: [
+            {
+                title: "orange juice",
+                price: 3.99,
+                quantity: 1,
+            },
+            {
+                title: "rice",
+                price: 1.99,
+                quantity: 3,
+            },
+            {
+                title: "beans",
+                price: 0.99,
+                quantity: 3,
+            },
+            {
+                title: "chili sauce",
+                price: 2.99,
+                quantity: 1,
+            },
+            {
+                title: "chocolate",
+                price: 0.75,
+                quantity: 9,
+            },
+        ],
+    };
+
+
+
+    function mostSpentOnItem(object) {
+        let items = object.items;
+        console.log(items);
+        let most = {title: '', price: 0, quantity: 0};
+
+       for(let i = 0; i < items.length; i++){
+           if((items[i].price * items[i].quantity) > (most.price * most.quantity)){
+               most = items[i];
+           }
+       }
+        return most;
+    }
+
+    console.log(mostSpentOnItem(shoppingCart));
+
+
+
+
+</script>
 
 </body>
 </html>
