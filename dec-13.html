@@ -134,10 +134,14 @@
 
     console.log(mostSpentOnItem(shoppingCart));
 
-    document.getElementById('four').addEventListener('click', changeBackground);
+    document.getElementById('four').addEventListener('mouseenter', changeBackground);
+    document.getElementById('four').addEventListener('mouseleave', changeBackgroundBack);
 
     function changeBackground(){
         document.getElementById('four').style.backgroundColor = 'blue';
+    }
+    function changeBackgroundBack(){
+        document.getElementById('four').style.backgroundColor = 'revert';
     }
 
 
