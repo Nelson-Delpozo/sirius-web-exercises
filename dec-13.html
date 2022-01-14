@@ -11,19 +11,19 @@
 <body>
 
 <div class="container" id="first-container">
-<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, vero?</p>-->
+    <!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, vero?</p>-->
     <div>
-    <div class="inner" id="first-inner">
-        <!--    first inner box here-->
-        I'm #1
-    </div>
-    <p id="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, vero?</p>
+        <div class="inner" id="first-inner">
+            <!--    first inner box here-->
+            I'm #1
+        </div>
+        <p id="first-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, vero?</p>
     </div>
     <div>
         <div class="inner" id="second-inner">
-        <!--    second inner box here-->
-        I'm #2
-    </div>
+            <!--    second inner box here-->
+            I'm #2
+        </div>
     </div>
     <p id="second-paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis, vero?</p>
 </div>
@@ -121,33 +121,40 @@
         console.log(items);
         let most = {title: '', price: 0, quantity: 0};
 
-       for(let i = 0; i < items.length; i++){
-           if((items[i].price * items[i].quantity) > (most.price * most.quantity)){
-               most = items[i];
-           }
-       }
+        for (let i = 0; i < items.length; i++) {
+            if ((items[i].price * items[i].quantity) > (most.price * most.quantity)) {
+                most = items[i];
+            }
+        }
         return most;
     }
+
+    console.log(mostSpentOnItem(shoppingCart));
 
 
     // EVENT LISTENERS LECTURE
 
-    console.log(mostSpentOnItem(shoppingCart));
-
     document.getElementById('four').addEventListener('mouseenter', changeBackground);
     document.getElementById('four').addEventListener('mouseleave', changeBackgroundBack);
 
-    function changeBackground(){
+    function changeBackground() {
         document.getElementById('four').style.backgroundColor = 'blue';
     }
-    function changeBackgroundBack(){
+
+    function changeBackgroundBack() {
         document.getElementById('four').style.backgroundColor = 'revert';
         document.getElementById('four').style.transform = 'rotate(350deg)';
 
     }
 
-document.getElementsByClassName('relative-box').item(0).style.backgroundColor='blue';
+    document.getElementsByClassName('relative-box').item(0).style.backgroundColor = 'blue';
 
+    // Make a program that filters through this array: ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"] and returns a new array that contains only those whose name have only 4 letters in them.
+
+    let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
+
+    let newNames = names.filter(name => name.length === 4);
+    console.log(newNames);
 
 
 </script>
