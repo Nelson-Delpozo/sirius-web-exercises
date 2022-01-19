@@ -154,8 +154,16 @@
     let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
 
     let newNames = names.filter(name => name.length === 4);
-    console.log(newNames);
+    // console.log(newNames);
 
+
+    function logNames(input){
+        input.forEach(function(element){
+            console.log(input);
+            console.log(element);
+        })
+    }
+    logNames(newNames);
 
 </script>
 
