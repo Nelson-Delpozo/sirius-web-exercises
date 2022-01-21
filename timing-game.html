@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timing Game</title>
+    <style>
+        .holder {
+            text-align: center;
+        }
+
+        #top {
+            margin-top: 175px;
+            margin-bottom: 25px;
+        }
+
+        #counter {
+            font-size: 5em;
+        }
+
+        #level-choice{
+            text-align: center;
+        }
+
+        #result{
+            text-align: center;
+            font-size: 5em;
+        }
+
+        .hidden{
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+<div id="top" class="holder">
+    <h1>press and hold any key and try to let go right at 100</h1>
+</div>
+<div id="counter" class="holder">0</div>
+<div id="result" class="hidden">Something here</div>
+<div id="level-choice">
+    <p>Select a level:</p>
+    <div>
+        <input type="radio" id="easy" name="level" value="easy"
+               checked>
+        <label for="easy">easy</label>
+    </div>
+    <div>
+        <input type="radio" id="medium" name="level" value="medium">
+        <label for="medium">medium</label>
+    </div>
+    <div>
+        <input type="radio" id="hard" name="level" value="hard">
+        <label for="hard">hard</label>
+    </div>
+</div>
+
+
+<script
+        src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+        crossorigin="anonymous"></script>
+<script>
+
+    let score = document.getElementById('counter');
+    let result = document.getElementById('result');
+    $(document).keydown(game).keyup(resetGame);
+    let levels = document.getElementsByName('level');
+    console.log(levels);
+    let counter = 0;
+
+
+    function game() {
+        counter += 1;
+        console.log(counter);
+        score.innerHTML = counter;
+    }
+
+    function resetGame() {
+        if(counter === 100){
+            $('#result').toggleClass('hidden');
+          result.innerHTML = "Boom ya did it"
+            return;
+        }else
+            $('#result').toggleClass('hidden');
+            result.innerHTML = "Oof try again"
+        score.innerHTML = counter;
+    }
+
+</script>
+</body>
+</html>
