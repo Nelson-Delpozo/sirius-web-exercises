@@ -179,15 +179,22 @@ band.shred();
     function characterThing(str){
 
         for (let i = 0; i < str.length; i++){
+            if (!str[i].match(/^[a-zA-Z]+$/)){
+                console.log(str[i] + " is not a letter")
 
-           if (str[i] === str[i].toUpperCase()){
-                console.log(str[i] + " is an upper-case letter!")
-            } else if (str[i] === str[i].toLowerCase()){
-                console.log(str[i] + " is a lower-case letter!")
+            }else{
+                if (str[i] === str[i].toUpperCase()){
+                    console.log(str[i] + " is an upper-case letter!");
+
+                } else if (str[i] === str[i].toLowerCase()){
+                    console.log(str[i] + " is a lower-case letter!");
+                }
             }
         }
     }
-characterThing("spaGHETti123");
+
+    characterThing(prompt("enter a crazy string"));
+
 
 
 

@@ -9,16 +9,19 @@
     <link rel=“preconnect” href=“https://fonts.gstatic.com” crossorigin>
     <link href=“https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Questrial&display=swap” rel=“stylesheet”>
     <title>Document</title>
+<!--    EMBEDDED STYLE-->
     <style>
-        body{
+        body {
             margin-bottom: 20px;
         }
+
         tr {
             border: 2px solid blue;
         }
     </style>
 </head>
 <body>
+<!--NAV-->
 <nav>
     <ul>
         <li>
@@ -31,7 +34,7 @@
     </ul>
 </nav>
 <header>
-    <h1 class="main-title" >this is a heading</h1>
+    <h1 class="main-title">this is a heading</h1>
     <br>
     <h2>This is a subtitle</h2>
 </header>
@@ -54,66 +57,65 @@
          alt="two cute floofers"
          width="300px"
          height="auto"
-         id="floofers"
-    >
+         id="floofers">
+<!--SECOND SECTION-->
 </section>
-<p class="highlight">hey, go check out this awesome cupcake ipsum    <a
+<p class="highlight">hey, go check out this awesome cupcake ipsum <a
         href="http://www.cupcakeipsum.com/paragraphs/5/length/long/with_love/false/start_with_cupcake/false/seed/c4ead25c93fb9fe49084ec7958c4223784cfa07639a05cedf47d57f52a337f7c"
         target="_blank"
 >click here</a></p>
-
+<!--THIRD SECTION-->
 <section id="third-section">
-<ul>
-    <li>something</li>
-    <li>
-        <a href="https://www.mcdonalds.com/us/en-us.html">i'm loving it</a>
-    </li>
-    <li>something</li>
-</ul>
+    <ul>
+        <li>something</li>
+        <li>
+            <a href="https://www.mcdonalds.com/us/en-us.html">i'm loving it</a>
+        </li>
+        <li>something</li>
+    </ul>
 
-<ol>
-    <li class="highlight">something</li>
-    <li>something</li>
-    <li>something</li>
+    <ol>
+        <li class="highlight">something</li>
+        <li>something</li>
+        <li>something</li>
+    </ol>
 
-</ol>
-
-<table id="table">
-    <!--    first row -->
-    <tr>
-        <th>List Items</th>
-        <th>Price</th>
-    </tr>
-    <!--    second row -->
-    <tr>
-        <td class="highlight">
-            oreos
-        </td>
-        <td>
-            $1.50
-        </td>
-    </tr>
-    <tr>
-        <td>
-            smoothies
-        </td>
-        <td>
-            $10.00
-        </td>
-    </tr>
-    <tr>
-        <td>
-            ice cream
-        </td>
-        <td>
-            $3.50
-        </td>
-    </tr>
-
-</table>
+    <table id="table">
+        <!--    first row -->
+        <tr>
+            <th>List Items</th>
+            <th>Price</th>
+        </tr>
+        <!--    second row -->
+        <tr>
+            <td class="highlight">
+                oreos
+            </td>
+            <td>
+                $1.50
+            </td>
+        </tr>
+        <tr>
+            <td>
+                smoothies
+            </td>
+            <td>
+                $10.00
+            </td>
+        </tr>
+        <tr>
+            <td>
+                ice cream
+            </td>
+            <td>
+                $3.50
+            </td>
+        </tr>
+    </table>
 </section>
 
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $('tr, td, th').css("border", "1px solid black");
     $('*').css("font-family", "Abril Fatface, cursive");
@@ -122,24 +124,13 @@
     $('#second-section').css("background-color", "yellow");
     $('#third-section').css("background-color", "lightblue");
     $('.highlight').css("background-color", "#fffacd");
-    $('img').mousedown(function(){
+
+
+    $('img').mousedown(function () {
         $(this).css("transform", "scale3d(1.5, 1.5, 1.5)");
-    });
-    $('img').mouseup(function(){
+    }).mouseup(function () {
         $(this).css("transform", "revert");
     });
-
-
-
-
-
-
-
-
-
-
-
-
 </script>
 </body>
 </html>
