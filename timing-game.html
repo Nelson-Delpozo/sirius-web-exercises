@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Timing Game</title>
     <style>
-        .holder {
+        * {
             text-align: center;
         }
 
@@ -20,17 +20,16 @@
             font-size: 5em;
         }
 
-        #level-choice{
-            text-align: center;
-        }
-
-        #result{
-            text-align: center;
+        #result {
             font-size: 5em;
         }
 
-        .hidden{
+        .hidden {
             visibility: hidden;
+        }
+
+        #reset {
+            margin-top: 50px;
         }
 
     </style>
@@ -44,18 +43,20 @@
 <div id="level-choice">
     <p>Select a level:</p>
     <div>
-        <input type="radio" id="easy" name="level" value="easy"
-               checked>
+        <input type="radio" id="easy" name="level" value="easy" checked onclick="levelChooser()">
         <label for="easy">easy</label>
     </div>
     <div>
-        <input type="radio" id="medium" name="level" value="medium">
+        <input type="radio" id="medium" name="level" value="medium" onclick="levelChooser()">
         <label for="medium">medium</label>
     </div>
     <div>
-        <input type="radio" id="hard" name="level" value="hard">
+        <input type="radio" id="hard" name="level" value="hard" onclick="levelChooser()">
         <label for="hard">hard</label>
     </div>
+</div>
+<div id="reset">
+    <button onclick="location.reload()">reset</button>
 </div>
 
 
@@ -67,9 +68,11 @@
 
     let score = document.getElementById('counter');
     let result = document.getElementById('result');
-    $(document).keydown(game).keyup(resetGame);
+    $(document).keypress(game).keyup(checkScore);
+
     let levels = document.getElementsByName('level');
-    console.log(levels);
+
+
     let counter = 0;
 
 
@@ -79,16 +82,15 @@
         score.innerHTML = counter;
     }
 
-    function resetGame() {
-        if(counter === 100){
-            $('#result').toggleClass('hidden');
-          result.innerHTML = "Boom ya did it"
-            return;
-        }else
-            $('#result').toggleClass('hidden');
+    function checkScore() {
+        $('#result').toggleClass('hidden');
+
+        if (counter === 100) {
+            result.innerHTML = "Boom ya did it"
+        } else
             result.innerHTML = "Oof try again"
-        score.innerHTML = counter;
     }
+
 
 </script>
 </body>
