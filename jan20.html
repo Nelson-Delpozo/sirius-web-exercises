@@ -38,11 +38,11 @@
 <hr>
 <!-- FIRST SECTION -->
 <div>
-    <section>
+    <section id="first-section">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </section>
 </div>
-<section class="section-one">
+<section class="section-one" id="second-section">
     <div>
         <p class="bio">Lorem "ipsum" dolor sit amet, cons<br>ectetur adipisicing
             elit.
@@ -57,11 +57,12 @@
          id="floofers"
     >
 </section>
-<p>hey, go check out this awesome cupcake ipsum    <a
+<p class="highlight">hey, go check out this awesome cupcake ipsum    <a
         href="http://www.cupcakeipsum.com/paragraphs/5/length/long/with_love/false/start_with_cupcake/false/seed/c4ead25c93fb9fe49084ec7958c4223784cfa07639a05cedf47d57f52a337f7c"
         target="_blank"
 >click here</a></p>
 
+<section id="third-section">
 <ul>
     <li>something</li>
     <li>
@@ -71,7 +72,7 @@
 </ul>
 
 <ol>
-    <li>something</li>
+    <li class="highlight">something</li>
     <li>something</li>
     <li>something</li>
 
@@ -85,7 +86,7 @@
     </tr>
     <!--    second row -->
     <tr>
-        <td>
+        <td class="highlight">
             oreos
         </td>
         <td>
@@ -110,12 +111,30 @@
     </tr>
 
 </table>
-
+</section>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $('tr, td, th').css("border", "1px solid black");
     $('*').css("font-family", "Abril Fatface, cursive");
+    $('ul').children().css("list-style", "none");
+    $('#first-section').css("background-color", "pink");
+    $('#second-section').css("background-color", "yellow");
+    $('#third-section').css("background-color", "lightblue");
+    $('.highlight').css("background-color", "#fffacd");
+    $('img').mousedown(function(){
+        $(this).css("transform", "scale3d(1.5, 1.5, 1.5)");
+    });
+    $('img').mouseup(function(){
+        $(this).css("transform", "revert");
+    });
+
+
+
+
+
+
+
 
 
 
