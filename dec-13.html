@@ -196,22 +196,31 @@ band.shred();
     characterThing(prompt("enter a crazy string"));
 
 
+//     Write a function that returns an object displaying any number/letter that appears consecutively in a string of numbers. The object should display how many times that letter/number appears consecutively
+//     INPUT: “42992338111134”
+// EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
+//     ---
+//         INPUT: “BQAAIPPPPFFA”
+// EXPECTED OUTPUT: {a: 2, p: 4, F: 2} (edited)
     // COUNT CONSECUTIVE DUPLICATES
-
-    const counts = {};
-    const sampleArray = ['a', 'a', 'b', 'b', 'b', 'c'];
-    const newArray = [];
-    for (let i = 0; i < sampleArray.length; i++){
-        if(sampleArray[i] === sampleArray[i - 1]){
-            newArray.push(sampleArray[i], sampleArray[i - 1]);
+    function getConsecutiveDuplicatesCounts() {
+        let input = prompt("enter a string");
+        const inputAsArray = input.split('');
+        const counts = {};
+        const newArray = [];
+        for (let i = 0; i < inputAsArray.length; i++) {
+            if (inputAsArray[i] === inputAsArray[i - 1] || inputAsArray[i] === inputAsArray[i + 1]) {
+                newArray.push(inputAsArray[i]);
+            }
         }
+        newArray.forEach(function (x) {
+            counts[x] = (counts[x] || 0) + 1;
+        });
+        console.log(counts)
+        // console.log(newArray);
     }
-    newArray.forEach(function (x) { counts[x] = (counts[x] || 0) + 1; });
-    console.log(counts)
-
-
+    getConsecutiveDuplicatesCounts();
 
 </script>
-
 </body>
 </html>
