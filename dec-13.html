@@ -81,6 +81,7 @@
     <div id="box4" class="relative-box"></div>
 </div>
 
+
 <script>
 
     const shoppingCart = {
@@ -154,39 +155,42 @@
     let names = ["Ryan", "Kieran", "Jason", "Mary", "Jo", "Jake"]
 
     let newNames = names.filter(name => name.length === 4);
+
     // console.log(newNames);
 
 
-    function logNames(input){
-        input.forEach(function(element){
+    function logNames(input) {
+        input.forEach(function (element) {
             console.log(input);
             console.log(element);
         })
     }
+
     logNames(newNames);
 
-    let band = {name: "Green Day",
-                shred: function(){
-                    console.log('ya')
-                }
+    let band = {
+        name: "Green Day",
+        shred: function () {
+            console.log('ya')
+        }
     }
-band.shred();
+    band.shred();
 
     // write a function that accepts a string and checks whether each character is upperCase or lowerCase and returns "letter  [insert letter] is uppercase/lowercase", accordingly.  Bonus: return "is not a character" if it's not a letter
     //
     // input example: "bJIENsdfRAIRVIrsRFAijgRar"
 
-    function characterThing(str){
+    function characterThing(str) {
 
-        for (let i = 0; i < str.length; i++){
-            if (!str[i].match(/^[a-zA-Z]+$/)){
+        for (let i = 0; i < str.length; i++) {
+            if (!str[i].match(/^[a-zA-Z]+$/)) {
                 console.log(str[i] + " is not a letter")
 
-            }else{
-                if (str[i] === str[i].toUpperCase()){
+            } else {
+                if (str[i] === str[i].toUpperCase()) {
                     console.log(str[i] + " is an upper-case letter!");
 
-                } else if (str[i] === str[i].toLowerCase()){
+                } else if (str[i] === str[i].toLowerCase()) {
                     console.log(str[i] + " is a lower-case letter!");
                 }
             }
@@ -196,12 +200,12 @@ band.shred();
     characterThing(prompt("enter a crazy string"));
 
 
-//     Write a function that returns an object displaying any number/letter that appears consecutively in a string of numbers. The object should display how many times that letter/number appears consecutively
-//     INPUT: “42992338111134”
-// EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
-//     ---
-//         INPUT: “BQAAIPPPPFFA”
-// EXPECTED OUTPUT: {a: 2, p: 4, F: 2} (edited)
+    //     Write a function that returns an object displaying any number/letter that appears consecutively in a string of numbers. The object should display how many times that letter/number appears consecutively
+    //     INPUT: “42992338111134”
+    // EXPECTED OUTPUT: {9: 2, 3: 2, 1: 4}
+    //     ---
+    //         INPUT: “BQAAIPPPPFFA”
+    // EXPECTED OUTPUT: {a: 2, p: 4, F: 2} (edited)
     // COUNT CONSECUTIVE DUPLICATES
     function getConsecutiveDuplicatesCounts() {
         let input = prompt("enter a string");
@@ -219,6 +223,7 @@ band.shred();
         console.log(counts);
         // console.log(newArray);
     }
+
     getConsecutiveDuplicatesCounts();
 
 </script>
