@@ -26,13 +26,23 @@
 
 <!-- Custom JS -->
 <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoibmVsZGVscG96byIsImEiOiJja3licjBodWcwaTU0Mm9wbTlreHgybXJ6In0.Y0YKAs4Kl1_KoKhZ3IUiJA';
-    var map = new mapboxgl.Map({
+    const accessToken = 'pk.eyJ1IjoibmVsZGVscG96byIsImEiOiJja3licjBodWcwaTU0Mm9wbTlreHgybXJ6In0.Y0YKAs4Kl1_KoKhZ3IUiJA';
+
+    mapboxgl.accessToken = accessToken;
+    let center = [-73.9262, 40.8296]
+    let map = new mapboxgl.Map({
         container: 'map',
         style: 'mapbox://styles/mapbox/streets-v9',
-        zoom: 10,
-        center: [-98.4916, 29.4252]
+        zoom: 15,
+        center: center
     });
+    let marker = new mapboxgl.Marker()
+        .setLngLat(center)
+        .addTo(map)
+    let yankeePopup = new mapboxgl.Popup()
+        .setHTML("<p>Home of 27 World Championships</p><h1>Yanks baby!</h1>")
+    marker.setPopup(yankeePopup);
+
 </script>
 </body>
 </html>
