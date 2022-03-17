@@ -5,98 +5,51 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sedgwick+Ave&display=swap" rel="stylesheet">
-    <title>Timing Game</title>
+    <title>Document</title>
     <style>
-        * {
+        body{
+            background: #000;
+            display: flex;
+            flex-direction: column;
             text-align: center;
-            font-family: 'Sedgwick Ave', cursive;
 
         }
 
-        #top {
-            margin-top: 175px;
-            margin-bottom: 25px;
+        .neon{
+            font-family: 'Monoton', cursive;
+            font-size:130px;
+            color: #FFD5FF;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 400;
+            letter-spacing: 8px;
+            text-shadow: 1px 0px 4px #FFD5FF, 2px 0px 4px #FFD5FF, 3px 0px 4px #FFD5FF, 2px 0px 3px #D42CCA, 2px 3px 15px #D42CCA, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #D42CCA,40px 0vw 200px #D42CCA;
         }
 
-        #counter {
-            font-size: 5em;
+        .flicker-slow{
+            animation: flicker 3s linear infinite;
         }
 
-        #result {
-            font-size: 5em;
+        .flicker-fast{
+            animation: flicker 1s linear infinite;
         }
 
-        .hidden {
-            visibility: hidden;
-        }
+        @keyframes flicker {
+            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+            //text-shadow: none;
+                opacity: .99;
 
-        #reset {
-            margin-top: 50px;
+            }
+            20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                opacity: 0.4;
+            }
         }
 
     </style>
 </head>
 <body>
-<div id="top" class="holder">
-    <h1>press and hold any key and try to let go right at 100</h1>
-</div>
-<div id="counter" class="holder">0</div>
-<div id="result" class="hidden">Something here</div>
-<div id="level-choice">
-    <p>Select a level:</p>
-    <div>
-        <input type="radio" id="easy" name="level" value="easy" checked onclick="levelChooser()">
-        <label for="easy">easy</label>
-    </div>
-    <div>
-        <input type="radio" id="medium" name="level" value="medium" onclick="levelChooser()">
-        <label for="medium">medium</label>
-    </div>
-    <div>
-        <input type="radio" id="hard" name="level" value="hard" onclick="levelChooser()">
-        <label for="hard">hard</label>
-    </div>
-</div>
-<div id="reset">
-    <button onclick="location.reload()">reset</button>
-</div>
-
-
-<script
-        src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous"></script>
-<script>
-
-    let score = document.getElementById('counter');
-    let result = document.getElementById('result');
-    $(document).keypress(game).keyup(checkScore);
-
-    let levels = document.getElementsByName('level');
-n
-
-    let counter = 0;
-
-
-    function game() {
-        counter += 1;
-        console.log(counter);
-        score.innerHTML = counter;
-    }
-
-    function checkScore() {
-        $('#result').toggleClass('hidden');
-
-        if (counter === 100) {
-            result.innerHTML = "Boom ya did it"
-        } else
-            result.innerHTML = "Oof try again"
-    }
-
-
-</script>
+<h1 class="neon" data-text="U">C<span class="flicker-fast">indy </span><span class="flicker-slow">I </span>l<span class="flicker-fast">ove </span><span class="flicker-slow">you</span></h1>
 </body>
 </html>
